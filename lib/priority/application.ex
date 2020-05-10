@@ -4,11 +4,6 @@ defmodule Priority.Application do
   use Application
 
   def start(_type, _args) do
-    children = [
-      Priority.EventStore
-    ]
-
-    opts = [strategy: :one_for_one, name: Priority.Supervisor]
-    Supervisor.start_link(children, opts)
+    Priority.Supervisor.start_link()
   end
 end

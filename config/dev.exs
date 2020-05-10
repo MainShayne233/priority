@@ -6,3 +6,5 @@ config :priority, Priority.EventStore,
   password: "postgres",
   database: "priority_eventstore_dev",
   hostname: "localhost"
+
+config :priority, Priority.App, event_store_adapter: Commanded.EventStore.Adapters.EventStore

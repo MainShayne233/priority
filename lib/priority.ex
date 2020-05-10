@@ -1,18 +1,29 @@
 defmodule Priority do
-  @moduledoc """
-  Documentation for `Priority`.
-  """
+  use TypedStruct
 
-  @doc """
-  Hello world.
+  alias Priority.Commands.{AddPriority}
+  alias Priority.Events.{PriorityAdded}
 
-  ## Examples
+  typedstruct do
+    field(:name, String.t(), enforce: true)
+    field(:active, boolean(), enforce: true)
+  end
 
-      iex> Priority.hello()
-      :world
+  def add_priority(priority_name) do
+    Priority.App.dispatch(%AddPriority{name: priority_name})
+  end
 
-  """
-  def hello do
-    :world
+  # Public command API
+
+  def execute(_priority, %AddPriority{
+        name: name
+      }) do
+    %PriorityAdded{name: name}
+  end
+
+  # State mutators
+
+  def apply(%Priority{} = priority, %PriorityAdded{name: name}) do
+    %Priority{priority | name: name}
   end
 end

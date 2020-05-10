@@ -22,6 +22,8 @@ defmodule Priority.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:commanded, "~> 1.0"},
+      {:commanded_eventstore_adapter, "~> 1.0.0"},
       {:eventstore, "~> 1.0"},
       {:jason, "~> 1.1"},
       {:typed_struct, "~> 0.1.4"},
