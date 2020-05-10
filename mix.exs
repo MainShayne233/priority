@@ -23,8 +23,11 @@ defmodule Priority.MixProject do
   defp deps do
     [
       {:eventstore, "~> 1.0"},
-
-  {:jason, "~> 1.1"}
+      {:jason, "~> 1.1"},
+      {:typed_struct, "~> 0.1.4"},
+      # DEV/TEST
+      {:faker, "~> 0.13.0", only: :test},
+      {:mix_test_watch, "~> 1.0", only: :dev, runtime: false}
     ]
   end
 end
