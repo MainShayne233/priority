@@ -1,5 +1,7 @@
 # Priority
 
+![](https://github.com/MainShayne233/priority/workflows/.github/workflows/elixir.yml/badge.svg)
+
 **TODO: Add description**
 
 ## Installation
