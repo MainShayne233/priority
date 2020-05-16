@@ -16,12 +16,6 @@ jobs:
         otp-version: 22.1
 
     - uses: actions/cache@v1
-      id: cache
-      with:
-        path: priv/plts
-        key:
-
-    - uses: actions/cache@v1
       id: deps-cache
       with:
         path: deps
@@ -34,7 +28,6 @@ jobs:
         key: ${{ runner.os }}-build-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
 
     - name: Install Dependencies
-      if steps.
       run: mix deps.get
 
     - name: Check Formatting
