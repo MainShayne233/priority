@@ -3,6 +3,7 @@ defmodule Priority.Events do
 
   @expected_version 0
 
+  @spec create_event(String.t()) :: String.t()
   def create_event(%PriorityCreatedEventData{name: name} = event_data) do
     do_create_event(name, event_data)
   end
