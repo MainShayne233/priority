@@ -1,6 +1,6 @@
 # Priority
 
-![](https://github.com/MainShayne233/priority/workflows/.github/workflows/elixir.yml/badge.svg)
+[![CI Status](https://github.com/MainShayne233/priority/workflows/Elixir%20CI/badge.svg)](https://github.com/MainShayne233/priority/actions)
 
 **TODO: Add description**
 
@@ -20,4 +20,3 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/priority](https://hexdocs.pm/priority).
-
