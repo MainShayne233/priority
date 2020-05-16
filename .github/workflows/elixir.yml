@@ -31,7 +31,7 @@ jobs:
       id: dialyzer-plt
       with:
         path: priv/plts
-        key: ${{ runner.os }}-plts-cache-${{ hashFiles('mix.lock') }}-v1
+        key: ${{ runner.os }}-plts-cache-v1
 
     - name: Install Dependencies
       run: mix deps.get
