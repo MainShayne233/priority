@@ -9,12 +9,14 @@ defmodule Priority do
     field(:active, boolean(), enforce: true)
   end
 
+  @spec add_priority(String.t()) :: :ok
   def add_priority(priority_name) do
     Priority.App.dispatch(%AddPriority{name: priority_name})
   end
 
   # Public command API
 
+  @spec execute(t(), Priority.Command.t()) :: Priority.Event.t()
   def execute(_priority, %AddPriority{
         name: name
       }) do
@@ -23,6 +25,7 @@ defmodule Priority do
 
   # State mutators
 
+  @spec apply(t(), Priority.Event.t()) :: t()
   def apply(%Priority{} = priority, %PriorityAdded{name: name}) do
     %Priority{priority | name: name}
   end

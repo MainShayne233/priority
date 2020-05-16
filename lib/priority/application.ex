@@ -3,6 +3,10 @@ defmodule Priority.Application do
 
   use Application
 
+  @spec start(term(), term()) ::
+          {:ok, pid()}
+          | {:error, {:already_started, pid()} | {:shutdown, term()} | term()}
+
   def start(_type, _args) do
     children = [{Priority.Supervisor, []}]
 

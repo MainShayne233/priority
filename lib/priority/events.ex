@@ -8,6 +8,7 @@ defmodule Priority.Events do
     do_create_event(name, event_data)
   end
 
+  @spec do_create_event(String.t(), Priority.Events.Data.t()) :: :ok
   defp do_create_event(stream_uuid, %event_type{} = event_data) do
     events = [
       %EventStore.EventData{
