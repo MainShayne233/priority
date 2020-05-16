@@ -1,6 +1,6 @@
 # Priority
 
-[![CI Status](https://github.com/MainShayne233/priority/workflows/Elixir%20CI/badge.svg)](https://github.com/MainShayne233/priority/actions)
+[![CI Status](https://github.com/MainShayne233/priority/workflows/Elixir%20CI/badge.svg)](https://github.com/MainShayne233/priority/actions?query=workflow%3A%22Elixir+CI%22)
 
 **TODO: Add description**
 
