@@ -22,9 +22,7 @@ defmodule Priority.MixProject do
 
   defp dialyzer,
     do: [
-      dialyzer: [
-        plt_file: {:no_warn, "priv/plts/dialyzer.plt"}
-      ]
+      plt_file: {:no_warn, "priv/plts/dialyzer.plt"}
     ]
 
   # Run "mix help deps" to learn about dependencies.
